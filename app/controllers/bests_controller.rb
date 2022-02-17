@@ -2,7 +2,20 @@ require 'open-uri'
 
 class BestsController < ApplicationController
   def index
-    @doc = Nokogiri::HTML(URI.open("https://news.ycombinator.com/best"))
-    puts Readability::Document.new(@doc.serialize).content
+    service = Bests::BestsService.new()
+    service.call
+    @doc = service.best
+  end
+
+  def get_content
+    meta = Nokogiri::HTML5.parse(URI.open(params[:link])).css('meta')
+    content = ''
+    meta.each do |m|
+      if m.attributes['name'].present? && m.attributes['name'].value == 'description'
+        content = m.attributes['content'].value
+      end
+    end
+
+    render json: {content: content}
   end
 end

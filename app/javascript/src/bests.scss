@@ -1,0 +1,37 @@
+// Place all the styles related to the Bests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.img-best{
+  display: flex; 
+  width: 95%; 
+  height: 400px; 
+  border: 1px; 
+  padding: 10px
+}
+
+.content-item {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+}
+@media all and (min-width: 567px) {
+  .img-best{
+    width: 92%; 
+  }
+}
+@media all and (min-width: 768px) {
+  .img-best{
+    width: 93%; 
+  }
+}
+@media all and (min-width: 992px) {
+  .img-best{
+    width: 94%; 
+  }
+}
+@media all and (min-width: 1200px) {
+  .img-best{
+    width: 95%; 
+  }
+}

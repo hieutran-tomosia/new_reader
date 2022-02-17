@@ -2,10 +2,14 @@
   "name": "news",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.12.10",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
+    "babel-preset-env": "^1.7.0",
+    "jquery": "^3.5.1",
+    "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
@@ -13,5 +17,11 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3"
+  },
+  "scripts": {
+    "start": "./bin/webpack-dev-server"
+  },
+  "engines": {
+    "node": ">=10.23.0"
   }
 }
